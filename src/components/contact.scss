@@ -1,0 +1,21 @@
+.smaller {
+    font-size: 1rem;
+    color: black;
+}
+
+h4 {
+    padding-top: 2rem;
+}
+
+form {
+    padding: .5rem .9rem;
+    background-color: rgba(102, 194, 255, 0.096);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 23, 37, 0.103);
+}
+
+@media (min-width:1200px) {
+    form {
+        padding: 1.5rem 3rem ;
+    }
+}

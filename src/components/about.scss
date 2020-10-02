@@ -1,0 +1,48 @@
+$mainColor: white;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #7180ac; $coolColor: #ff2200; $navColor: $secondColor;
+// START ABOUT ---------------------------------------------------------------------
+
+#about {
+    background-color: white;
+}
+
+.bot-shadow {
+    padding-bottom: .8rem;
+    box-shadow: 0 .9rem .6rem rgba(0,0,0,.15)!important;
+}
+
+hr {
+    width: 75%;
+    border-top: 1px solid $secondColor;
+} 
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills2 {
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.skill-box {
+
+    margin: .5rem;
+
+    img {
+      max-height: 8rem;
+      width: auto;
+    }
+    
+}
+
+@media(min-width: 1200px) {
+    .skills2 {
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+}
+// END ABOUT ---------------------------------------------------------------------

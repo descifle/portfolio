@@ -1,0 +1,124 @@
+$mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #0ea522; $coolColor: #1e93d6; $grey: #dcdcdc5d;
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.main {
+    padding-bottom: 5rem;
+}
+
+.main-photo {
+    width: 20rem;
+    img {
+        border-radius: 50%;
+        border: $coolColor solid 1px;
+        box-shadow: white;
+    }
+}
+
+.blurb {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.github {
+    color: black;
+    transition: color .4s ease;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.main-skills {
+    background-color: $grey;
+    border-radius: 0;
+    padding: 2rem 1rem;
+    color: $textColor;
+
+    .main-skills_info {
+        text-align: left;
+    }
+
+    .main-skills_progress {
+        text-align: right;
+    }
+}
+
+.project-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    max-width: 100%;
+    margin:1rem 0;
+}
+
+.btn-link {
+    margin: .40rem 0;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff !important;
+    background-color: #ff2200d5 !important;
+    border-color: #343a40;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &:hover {
+        background-color: $secondColor!important;
+    }
+}
+
+
+@media (min-width: 40rem) {
+
+    .main-skills {
+        background-color: $grey;
+        border-radius: .5rem;
+        border-left: solid 3px $coolColor;
+        color: $textColor;
+    
+        .main-skills_info {
+            text-align: left;
+        }
+    
+        .main-skills_progress {
+            text-align: right;
+        }
+    }
+
+    .project-cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+
+    .card {
+        max-width: 40%;
+    }
+}
+
+
+
+
+
