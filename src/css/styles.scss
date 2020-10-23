@@ -1,12 +1,35 @@
 $mainColor: white;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #7180ac; $coolColor: #ff2200; $navColor: $secondColor;
 
+body{
+    background: none;
+}
+
 
 #startpoint {
+    // z-index: -1;
     position: relative;
     min-height: 100vh;
-    background: $mainColor;
+    // background: $mainColor;
     color: $textColor;
+    background-image: url("../images/pattern.jpg");
 }
+
+#startpoint::after {
+    z-index: 1;
+    background-color: rgba(29, 29, 29, 0.986);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+}
+
 
 // START HEADER ----------------------------------------------------------------------
 
@@ -18,7 +41,7 @@ $mainColor: white;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #71
 .navigation {
     display: flex;
     position: static;
-    background-color: rgba(192, 192, 192, 0.226);
+    background-color: rgba(27, 27, 27, 0.918);
     left: 0;
     top: 0;
     width: 100%;

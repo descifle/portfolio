@@ -1,10 +1,14 @@
 import React from 'react';
 import './webcard.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init()
 
 
 const WebCard = (props) => {
     return (
-        <div className="card rounded">
+        <div className="card rounded" data-aos="zoom-in-down" data-aos-delay="150">
             <div className="image">
                 <img src={props.image} alt="project"></img>
             </div>

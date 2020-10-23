@@ -26,7 +26,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container main">
             <div className="row">
                 <div className="col-md-8">
                     <h1 className="text-center">Get In Touch</h1>

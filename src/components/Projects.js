@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import WebCard from './WebCard';
-import SkillBox from './SkillBox';
 import './about.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,13 +11,6 @@ import site5 from '../images/site5.png';
 import site6 from '../images/site6.png';
 import site7 from '../images/site7.png';
 import mytube from '../images/mytube.png';
-import imgR from '../images/react.png';
-import imgCss from '../images/CSS3.png';
-import imgJs from '../images/js.png';
-import imgJquery from '../images/jquery.png';
-import imgPhp from '../images/php.png';
-import imgSql from '../images/mysql.png';
-import imgGit from '../images/github.png';
 // import site8 from '../images/site8.png';
 
 
@@ -86,7 +78,7 @@ const Projects = () => {
             website : 'http://sttimtennisclub.com',
             projectType : 'php icon large',
             projectSkill :  'Php, Mysql, Js, Css',
-            filter  :  'websites',
+            filter  :  'websites apps',
             image : site2
         },
         {
@@ -94,7 +86,7 @@ const Projects = () => {
             website : 'https://mytubemern.herokuapp.com/',
             projectType : 'react icon large',
             projectSkill : 'React, MERN, Js',
-            filter : 'websites',
+            filter : 'websites apps',
             image : mytube
         }
     ]
@@ -106,7 +98,7 @@ const Projects = () => {
     const renderCard = realCards.map((card) => {
         if(filter === 'default') {
             return <WebCard key={card.projectName} projectName={card.projectName} website={card.website} projectType={card.projectType} projectSkill={card.projectSkill} image={card.image} />
-        } else if (card.filter === filter) {
+        } else if (card.filter.includes(filter)) {
             return <WebCard key={card.projectName} projectName={card.projectName} website={card.website} projectType={card.projectType} projectSkill={card.projectSkill} image={card.image} />
         } else {
             return false;
@@ -114,7 +106,7 @@ const Projects = () => {
     })
 
     return (
-        <div id="about" className="container-fluid">
+        <div id="about" className="container-fluid main">
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-5">
@@ -127,7 +119,7 @@ const Projects = () => {
                             <a onClick={() => setFilter('emails')} href="#emails" className={filter === "emails" ? "bg-danger text-white item" : "item"}>Emails</a>
                         </div>
                         <p className="text-center bot-shadow">Sort project by type</p>
-                        <div data-aos="fade-in" data-aos-delay="150" className="ui link cards justify-content-center pt-3">
+                        <div className="ui link cards justify-content-center pt-3">
                         {renderCard}
                         </div>
                     </div>
@@ -137,18 +129,20 @@ const Projects = () => {
                         <div>
                             <h3 className="my-3">Languages</h3>
                             <div className="skills">
-                            <SkillBox image={imgCss} skillDesc='Extremely detailed components' />
-                            <SkillBox image={imgJs} skillDesc='Easy to understand and use Functions/Classes/Methods' />
-                            <SkillBox image={imgPhp} skillDesc='Tight Security for server and databases' />
-                            <SkillBox image={imgSql} skillDesc='Easy database Manipulation' />
-                            <SkillBox image={imgR} skillDesc='Excellent handling of Component/state/dom' />
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>Node</span>
+                            <span>MongoDB</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Mobile Responsive</span>
+                            <span></span>
                             </div>
                         </div>
                         <div>
                             <h3 className="mt-5">Technologies & tools</h3>
                             <div className="d-flex skills2">
-                            <SkillBox image={imgJquery} skillDesc='Understanding of the dom and jquery as a whole' />
-                            <SkillBox image={imgGit} skillDesc='pushing/cloning/updating master' />
+                            
                             </div>
                         </div>
                     </div>
