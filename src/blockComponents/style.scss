@@ -1,4 +1,77 @@
-$mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #ffffff; $coolColor: #1e93d6; $grey: #dcdcdc5d;
+// $mainColor: white;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #7180ac; $coolColor: #ff2200; $navColor: $secondColor;
+$mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #ffffff; $coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: $secondColor;
+// START ABOUT ---------------------------------------------------------------------
+
+.bot-shadow {
+    padding-bottom: .8rem;
+    box-shadow: 0 .9rem .6rem rgba(0,0,0,.15)!important;
+}
+
+hr {
+    width: 75%;
+    border-top: 1px solid $secondColor;
+} 
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills2 {
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.skill-box {
+
+    margin: .5rem;
+
+    img {
+      max-height: 8rem;
+      width: auto;
+    }
+    
+}
+
+@media(min-width: 1200px) {
+    .skills2 {
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+}
+// END ABOUT ---------------------------------------------------------------------
+// Start Contact ---------------------------------------------------------------------
+
+.smaller {
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+h4 {
+    padding-top: 2rem;
+}
+
+form {
+    padding: .5rem .9rem;
+    background-color: #7180acd2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 23, 37, 0.103);
+}
+
+@media (min-width:1200px) {
+    form {
+        padding: 1.5rem 3rem ;
+    }
+}
+
+// End Contact ---------------------------------------------------------------------
+
+// START CONTENT---------------------------------------------------
 
 h1 {
     font-size: 4rem;
@@ -119,7 +192,4 @@ p {
     }
 }
 
-
-
-
-
+// END CONTENT---------------------------------------------------

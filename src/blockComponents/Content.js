@@ -1,8 +1,7 @@
 import React from 'react';
-import './content.scss';
 import WebCard from './WebCard';
 import { NavLink } from 'react-router-dom';
-import myPhoto from '../images/head_photo.jpg';
+// import myPhoto from '../images/head_photo.jpg';
 import site2 from '../images/site2.png';
 import mytube from '../images/mytube.png';
 import AOS from 'aos';
@@ -11,15 +10,18 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const Content = () => {
+
+    // add resume so that users can instantly gratify ::s
+
     return (
         <div className="container main">
                     <div data-aos="fade-left" className="main-txt text-center pt-5">
                         <h1>I'm Giovanni Headley</h1>
                         <p data-aos="fade-in"  data-aos-delay="800" className="my-3">Full Stack Web Developer</p>
                     </div>
-                    <div className="main-photo mx-auto">
+                    {/* <div className="main-photo mx-auto">
                         <img className="shadow-lg" src={myPhoto} alt="developer" />
-                    </div>
+                    </div> */}
                     <div className="row">
                         <div className="col-12 mb-5">
                             <div className="blurb">
@@ -28,7 +30,7 @@ const Content = () => {
                             <hr />
                             <div className="blurb text-center">
                                 <p>
-                                    Full Stack Web Developer, Specializing in MERN development, Object-oriented and user-centered design
+                                    Full Stack Web Developer, Specializing in MERN, Object-oriented and user-centered development
                                 </p>
                                 {/* <p>
                                     I also have learned additional skills that were picked up on my journey in development including but not limited to.

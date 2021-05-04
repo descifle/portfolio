@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import WebCard from './WebCard';
-import './about.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import site1 from '../images/site1.png';
@@ -11,6 +10,7 @@ import site5 from '../images/site5.png';
 import site6 from '../images/site6.png';
 import site7 from '../images/site7.png';
 import mytube from '../images/mytube.png';
+import foodPlanner from '../images/site9.png'
 // import site8 from '../images/site8.png';
 
 
@@ -88,6 +88,14 @@ const Projects = () => {
             projectSkill : 'React, MERN, Js',
             filter : 'websites apps',
             image : mytube
+        },
+        {
+            projectName : 'Food Planner',
+            website : 'https://food-planner-elite.herokuapp.com/',
+            projectType : 'react icon large',
+            projectSkill : 'React, MERN, Js',
+            filter : 'websites apps',
+            image : foodPlanner
         }
     ]
 

@@ -22,6 +22,10 @@ const Header = () => {
                         <i className="envelope icon big"></i>
                         <p>Contact</p>
                     </NavLink>
+                    <div className="">
+                    <a href="https://github.com/descifle"><i className="github square icon big"></i></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><i className="linkedin square icon big"></i></a>
+                    </div>
                 </div>
             </nav>
         </header>

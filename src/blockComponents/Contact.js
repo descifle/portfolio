@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import './contact.scss';
 
 const Contact = () => {
     const [firstName, setFirstName] = useState("");
