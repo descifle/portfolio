@@ -1,5 +1,5 @@
 $mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #ffffff; 
-$coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: $secondColor;
+$coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: #171f36;
 
 // HEADER =======================================================================================
 
@@ -19,9 +19,11 @@ a {
     text-decoration: none;
 }
 
-// .my-nav {
-//      top: 0;
-// }
+.my-nav {
+    z-index: 99;
+    background-color: $navColor;
+    box-shadow:2px 0px 30px 5px rgba(0, 0, 0, 0.664) ;
+}
 
 .navigation {
     display: flex;
@@ -45,9 +47,25 @@ a {
     transition: .2s ease;
 
     &:hover {
-        color: black;
+        color:rgba(154, 158, 158, 0.8);
     }
 }
+
+.menu-item.active {
+    color:rgba(154, 158, 158, 0.8);
+}
+// START WORKPAGE
+
+.card-container {
+    padding: 4rem;
+}
+
+.card-img {
+    height: 200px;
+    width: 100%;
+}
+
+// END WORKPAGE
 
 // END HEADER
 
@@ -89,10 +107,6 @@ a {
         font-size: 2rem;
         transition: .2s ease;
         padding: 0 2rem;
-
-        &:hover {
-            color: black;
-        }
     }
 
     .page-container {
@@ -115,6 +129,7 @@ a {
 
 .pageSlider-exit  {
     z-index: 1;
+    // display: none;
 }
 
 .pageSlider-enter  {
@@ -133,11 +148,19 @@ a {
     transform: translate3d(-100%, 0, 0);
 }
 
-.pageSlider-exit.right e {
+.pageSlider-exit.right {
     transform: translate3d(100%, 0, 0);
 }
 
 .pageSlider-enter.pageSlider-enter-active  {
     transform: translate3d(0, 0, 0);
+    transition: all .8s ease-in-out;
+}
+
+.pageSlider-exit {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    // transform: translate3d(0, 0, 0);
     transition: all .8s ease-in-out;
 }

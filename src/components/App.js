@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from './base/Header';
 import Footer from './base/Footer';
 import MainPage from './MainPage'
@@ -11,11 +11,22 @@ import './style.scss'
 
 const App = () => {
 
-    const timeout = { enter: 1000, exit: 400 }
+    const timeout = { enter: 800, exit: 800 }
 
     let location = useLocation()
     let history = useHistory()
-    const possiblePaths = ['/', '/works', '/contact']
+    const possiblePaths = ['/home', '/works', '/contact']
+
+    const outputClassname = () => {
+        if(history.location.pathname !== "/") {
+            console.log(history.location.pathname, history.location.state.from)
+            const pathFrom = possiblePaths.indexOf(history.location.state.from)
+            const currentPath = possiblePaths.indexOf(history.location.pathname)
+            if(history.location.state.from === "/works") return "left"
+            if(history.location.state.from === "/contact") return "left"
+            if(history.location.state.from === "/home") return "left"
+        }
+    }
 
     return (
         <>
@@ -24,15 +35,15 @@ const App = () => {
                 <CSSTransition timeout={timeout}
                 classNames="pageSlider" 
                 key={location.key}
-                mountOnEnter={false}
-                unmountOnExit={true}
+                // mountOnEnter={true}
+                // unmountOnExit
                 >
                     <div className={
-                        possiblePaths.indexOf(history.location.state.from) > possiblePaths.indexOf(history.location.pathname) ?
-                        "right" : "left"
+                        outputClassname()
                     }>
                     <Switch location={location}>
-                        <Route exact name="home" path="/" component={MainPage} />
+                        <Route exact name="main" path="/" component={MainPage} />
+                        <Route exact name="home" path="/home" component={MainPage} />
                         <Route exact name="works" path="/works" component={WorkPage} />
                         <Route exact name="contact" path="/contact" component={ContactPage} />
                         {/* <Route path="*"><div>Not Found</div></Route> */}
