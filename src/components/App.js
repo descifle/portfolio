@@ -15,17 +15,17 @@ const App = () => {
 
     let location = useLocation()
     let history = useHistory()
-    const possiblePaths = ['/home', '/works', '/contact']
+    // const possiblePaths = ['/home', '/works', '/contact']
 
     const outputClassname = () => {
-        if(history.location.pathname !== "/") {
-            console.log(history.location.pathname, history.location.state.from)
-            const pathFrom = possiblePaths.indexOf(history.location.state.from)
-            const currentPath = possiblePaths.indexOf(history.location.pathname)
-            if(history.location.state.from === "/works") return "left"
-            if(history.location.state.from === "/contact") return "left"
-            if(history.location.state.from === "/home") return "left"
-        }
+        return "left"
+        // if(history.location.pathname !== "/") {
+        //     // const pathFrom = possiblePaths.indexOf(history.location.state.from)
+        //     // const currentPath = possiblePaths.indexOf(history.location.pathname)
+        //     if(history.location.state.from === "/works") return "left"
+        //     if(history.location.state.from === "/contact") return "left"
+        //     if(history.location.state.from === "/home") return "left"
+        // }
     }
 
     return (
@@ -35,8 +35,10 @@ const App = () => {
                 <CSSTransition timeout={timeout}
                 classNames="pageSlider" 
                 key={location.key}
-                // mountOnEnter={true}
-                // unmountOnExit
+                mountOnEnter={true}
+                unmountOnExit
+                onEntering={() => {document.body.style.overflow = "hidden"}}
+                onExited={() => {document.body.style.overflow = "initial"}}
                 >
                     <div className={
                         outputClassname()

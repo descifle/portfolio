@@ -1,4 +1,5 @@
 import { Container, Grid, Card, CardActions, CardContent, Button } from '@material-ui/core'
+import { GitHub, LinkedIn } from '@material-ui/icons'
 import React from 'react'
 
 const MainPage = () => {
@@ -7,6 +8,10 @@ const MainPage = () => {
         <Container>
             <div className="page-container">
                 <h2>Giovanni Headley</h2>
+                <div className="socials">
+                    <GitHub />
+                    <LinkedIn />
+                </div>
                 <h1 className="main-header">Full Stack Developer</h1>
                 <div className="about-me">
                     <Grid>

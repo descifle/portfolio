@@ -8,11 +8,11 @@ import site7 from '../images/site7.png';
 import mytube from '../images/mytube.png';
 import foodPlanner from '../images/site9.png'
 
-let cards = [
+let realCards = [
     {
         projectName :'Hangman Game',
         website :'https://descifle.github.io/hangman-game/',
-        projectType :'js icon large',
+        projectType :'js',
         projectSkill : 'Js, Css, html',
         filter : 'apps',
         image : site6
@@ -20,7 +20,7 @@ let cards = [
     {
         projectName :'Email Invoice',
         website :'https://cashslap.netlify.app/',
-        projectType :'html5 icon large',
+        projectType :'html5',
         projectSkill : 'FFE, Html, Css',
         filter  : 'emails',
         image : site5
@@ -28,7 +28,7 @@ let cards = [
     {
         projectName : 'Notes App',
         website : 'https://descifle.github.io/notes-app/index.html',
-        projectType : 'js icon large',
+        projectType : 'js',
         projectSkill :  'Css, Js',
         filter  :  'apps',
         image : site7
@@ -36,7 +36,7 @@ let cards = [
     {  
         projectName : 'Email Newsletter',
         website : 'https://newsletteremailxx.netlify.app/',
-        projectType : 'html5 icon large',
+        projectType : 'html5',
         projectSkill :  'FFE, Html, Css',
         filter  :  'emails',
         image : site4
@@ -44,7 +44,7 @@ let cards = [
     {
         projectName: 'Uhost',
         website: 'https://descifle.github.io/Uhost/index.html',
-        projectType: 'css3 alternate icon large',
+        projectType: 'Html5',
         projectSkill:  'Css, Html, Js',
         filter :  'websites',
         image: site3
@@ -53,7 +53,7 @@ let cards = [
     {
         projectName : 'Mcdowell',
         website : 'https://mcdowellschimney.com/',
-        projectType : 'js icon large',
+        projectType : 'js',
         projectSkill :  'Css, Html, Js',
         filter  :  'websites',
         image : site1
@@ -61,7 +61,7 @@ let cards = [
     {
         projectName : 'Sttimtennis',
         website : 'http://sttimtennisclub.com',
-        projectType : 'php icon large',
+        projectType : 'php',
         projectSkill :  'Php, Mysql, Js, Css',
         filter  :  'websites apps',
         image : site2
@@ -69,7 +69,7 @@ let cards = [
     {
         projectName : 'MyTube',
         website : 'https://mytubemern.herokuapp.com/',
-        projectType : 'react icon large',
+        projectType : 'react',
         projectSkill : 'React, MERN, Js',
         filter : 'websites apps',
         image : mytube
@@ -77,14 +77,16 @@ let cards = [
     {
         projectName : 'Food Planner',
         website : 'https://food-planner-elite.herokuapp.com/',
-        projectType : 'react icon large',
+        projectType : 'react',
         projectSkill : 'React, MERN, Js',
         filter : 'websites apps',
         image : foodPlanner
     }
 ]
 
+const cards = realCards.reverse()
+
 
 export {
-    cards
+   cards
 }
