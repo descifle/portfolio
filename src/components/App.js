@@ -4,12 +4,15 @@ import Footer from './base/Footer';
 import MainPage from './MainPage'
 import WorkPage from './WorkPage'
 import ContactPage from './ContactPage'
+import AboutPage from './AboutPage'
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import ScrollToTop from './scrolltotop';
 import './style.scss'
 
 const App = () => {
+
+    // allow turning off of animation
 
     const timeout = { enter: 800, exit: 800 }
 
@@ -37,15 +40,21 @@ const App = () => {
                 key={location.key}
                 mountOnEnter={true}
                 unmountOnExit
-                onEntering={() => {document.body.style.overflow = "hidden"}}
-                onExited={() => {document.body.style.overflow = "initial"}}
+                onEntering={() => {
+                    document.body.style.overflow = "hidden"
+                    // document.querySelector('.page-container').style.marginTop = "0"
+                }}
+                onExited={() => {
+                    document.body.style.overflow = "initial"
+                    // document.querySelector('.page-container').style.marginTop = "2rem"
+                }}
                 >
                     <div className={
                         outputClassname()
                     }>
                     <Switch location={location}>
-                        <Route exact name="main" path="/" component={MainPage} />
-                        <Route exact name="home" path="/home" component={MainPage} />
+                        <Route exact name="home" path="/" component={MainPage} />
+                        <Route exact name="about" path="/about" component={AboutPage} />
                         <Route exact name="works" path="/works" component={WorkPage} />
                         <Route exact name="contact" path="/contact" component={ContactPage} />
                         {/* <Route path="*"><div>Not Found</div></Route> */}

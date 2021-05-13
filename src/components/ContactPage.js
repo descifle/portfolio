@@ -12,7 +12,7 @@ const ContactPage = () => {
                         
                         
                 </div>
-                <h1>Let's Talk</h1>
+                <h1 className="contact-h1">Let's Talk</h1>
                 <div>
                     <div>you can reach me at</div>
                     <div><span><GitHub fontSize="large" /></span><span><LinkedIn fontSize="large" /></span><span>or at <a href="mailto:giovanniheadley@gmail.com">giovanniheadley@gmail.com</a></span></div>

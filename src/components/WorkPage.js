@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { fa } from '@fortawesome/free-solid-svg-icons'
@@ -7,8 +7,10 @@ import { cards } from './misc'
 
 const WorkPage = () => { 
 
+    const [list, setList] = useState(cards)
+
     const renderCards = () => {
-        return cards.map((card) => {
+        return list.map((card) => {
             return (
                     <Grid item xs={12} sm={6} key={card.projectName} >
                         <Card>
@@ -44,10 +46,13 @@ const WorkPage = () => {
         })
     }
 
+    console.log(list)
+
     return (
         <Container>
             <div className="page-container">
                 <p>Some content</p>
+                <div onClick={() => setList(cards.filter(card => card.projectType !== "php"))} style={{marginBottom: "5rem"}}>some kinda sort</div>
                 <Grid container spacing={10}>
                     {renderCards()}
                 </Grid>

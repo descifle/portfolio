@@ -19,7 +19,7 @@ const Header = () => {
                     </NavLink> */}
                     <NavLink activeClassName='active' className="menu-item" to={
                         {
-                            pathname: '/home',
+                            pathname: '/about',
                             state: {
                                 from: location.pathname
                             }

@@ -90,10 +90,20 @@ a {
 
 // END WORKPAGE
 
+// START CONTACT PAGE
+
+.contact-h1 {
+    font-size: 7.5rem;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+// END CONTACT PAGE
+
 // START MISC
 
 .page-container {
-    // margin-left: 6rem;
+    margin-top: 6rem;
 }
 
 @media(min-width: 40rem) {
@@ -177,6 +187,7 @@ a {
 
 .pageSlider-exit {
     opacity: 0;
+    margin-top: 4rem;
     position: absolute;
     top: 0;
     width: 100vw;
