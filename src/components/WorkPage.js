@@ -1,13 +1,29 @@
 import React, { useState } from 'react'
-import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button } from '@material-ui/core'
+import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button, Tabs, Tab, Paper } from '@material-ui/core'
+import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { fa } from '@fortawesome/free-solid-svg-icons'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 import { cards } from './misc'
 
 const WorkPage = () => { 
 
     const [list, setList] = useState(cards)
+    const [value, setValue] = useState(2)
+
+    const handleChange = (event, newValue) => {
+        if(newValue === value) {
+            setList(cards)
+            return setValue(false)
+        }
+        // eslint-disable-next-line array-callback-return
+        setList(cards.filter(card => {
+            if(newValue === 0) return card.filter.includes('apps')
+            if(newValue === 1) return card.filter.includes('websites')
+            if(newValue === 2) return card.filter.includes('emails')
+        }))
+        setValue(newValue)
+    }
 
     const renderCards = () => {
         return list.map((card) => {
@@ -19,9 +35,6 @@ const WorkPage = () => {
                                     card.projectType === 'react' ? <FontAwesomeIcon size="lg" color="#61DBFB" icon={faReact} />:
                                     card.projectType === 'php' ? <FontAwesomeIcon size="lg" color="Magenta" icon={faPhp} /> :
                                     <FontAwesomeIcon size="lg" color="#e34c26" icon={faHtml5} />
-                                // <Avatar aria-label="recipe" className={classes.avatar}>
-                                //     R
-                                // </Avatar>
                                 }
                                 // action={
                                 // <IconButton aria-label="settings">
@@ -46,13 +59,29 @@ const WorkPage = () => {
         })
     }
 
-    console.log(list)
-
     return (
         <Container>
             <div className="page-container">
-                <p>Some content</p>
-                <div onClick={() => setList(cards.filter(card => card.projectType !== "php"))} style={{marginBottom: "5rem"}}>some kinda sort</div>
+                <h2><Link to="/">Giovanni Headley</Link></h2>
+                <div className="socials">
+                    <span><GitHub fontSize="large" /></span>
+                    <span><LinkedIn fontSize="large" /></span>
+                </div>
+                {/* <div onClick={() => setList(cards.filter(card => card.projectType !== "php"))} style={{marginBottom: "5rem"}}>some kinda sort</div> */}
+                <Paper>
+                    <Tabs
+                        variant="fullWidth"
+                        value={value}
+                        indicatorColor="primary"
+                        textColor="primary"
+                        onChange={handleChange}
+                        aria-label="work type"
+                    >
+                        <Tab label="Apps" />
+                        <Tab label="Websites" />
+                        <Tab label="Emails" />
+                    </Tabs>
+                </Paper>
                 <Grid container spacing={10}>
                     {renderCards()}
                 </Grid>

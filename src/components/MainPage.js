@@ -1,4 +1,4 @@
-import { Container, Grid, Card, CardActions, CardContent, Button } from '@material-ui/core'
+import { Container, Grid, Card, CardContent, Button } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import React from 'react'
 

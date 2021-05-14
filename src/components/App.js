@@ -5,7 +5,7 @@ import MainPage from './MainPage'
 import WorkPage from './WorkPage'
 import ContactPage from './ContactPage'
 import AboutPage from './AboutPage'
-import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import ScrollToTop from './scrolltotop';
 import './style.scss'
@@ -17,7 +17,7 @@ const App = () => {
     const timeout = { enter: 800, exit: 800 }
 
     let location = useLocation()
-    let history = useHistory()
+    // let history = useHistory()
     // const possiblePaths = ['/home', '/works', '/contact']
 
     const outputClassname = () => {

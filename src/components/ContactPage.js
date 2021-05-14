@@ -1,13 +1,14 @@
 import { Container } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ContactPage = () => {
 
     return (
         <Container>
             <div className="page-container">
-                <h2>Giovanni Headley</h2>
+                <h2><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
                         
                         
