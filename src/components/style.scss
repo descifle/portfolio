@@ -1,5 +1,6 @@
 $mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #ffffff; 
 $coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: #171f36;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
 // HEADER =======================================================================================
 
@@ -7,7 +8,16 @@ $coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: #171f36;
 //     height: 100vh;
 // }
 
+h1 {
+    font-family: 'Roboto Slab', serif;
+} 
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+}
+
 body {
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
     background-color: $mainColor;
     color: white;
@@ -37,6 +47,7 @@ a {
 }
 
 .menu-item {
+    font-family: 'Roboto Slab', serif;
     width: 33%;
     text-align: center;
     margin: 0;
@@ -77,6 +88,29 @@ a {
 
 // END MAIN PAGE
 
+// START ABOUT PAGE
+
+.employment {
+    
+    h2 {
+        // width: 25%;
+        // display: inline;
+        // margin-right: 1rem;
+    }
+
+    hr {
+        // width: 75%;
+        // display: inline-block;
+    }
+}
+
+.employment-history {
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+// END ABOUT PAGE
+
 // START WORKPAGE
 
 .card-container {
@@ -86,6 +120,19 @@ a {
 .card-img {
     height: 200px;
     width: 100%;
+}
+
+.card-head {
+    background-color: $navColor;
+    color: white;
+}
+
+.card-body {
+    background-color: $secondColor;
+}
+
+.sorter {
+    margin-bottom: 3rem;
 }
 
 // END WORKPAGE
@@ -193,4 +240,9 @@ a {
     width: 100vw;
     // transform: translate3d(0, 0, 0);
     transition: all .8s ease-in-out;
+}
+
+.placeholdie {
+    width: 4rem;
+    height: 4rem;
 }

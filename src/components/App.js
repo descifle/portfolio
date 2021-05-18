@@ -7,10 +7,15 @@ import ContactPage from './ContactPage'
 import AboutPage from './AboutPage'
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import ScrollToTop from './scrolltotop';
 import './style.scss'
 
+const theme = createMuiTheme()
+
+
 const App = () => {
+    console.log(theme.palette.primary, theme.palette)
 
     // allow turning off of animation
 
@@ -32,7 +37,8 @@ const App = () => {
     }
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
+            <>
             <Header />
             <TransitionGroup>
                 <CSSTransition timeout={timeout}
@@ -42,11 +48,9 @@ const App = () => {
                 unmountOnExit
                 onEntering={() => {
                     document.body.style.overflow = "hidden"
-                    // document.querySelector('.page-container').style.marginTop = "0"
                 }}
                 onExited={() => {
                     document.body.style.overflow = "initial"
-                    // document.querySelector('.page-container').style.marginTop = "2rem"
                 }}
                 >
                     <div className={
@@ -62,12 +66,16 @@ const App = () => {
                         <Route path="/projects" component={Projects} />
                         <Route path="/contact" component={Contact} /> */}
                     </Switch>
+                    {/* <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.dark, }}></div>
+                    <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.light, }}></div>
+                    <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.main, }}></div> */}
                     </div>
                 </CSSTransition>
             </TransitionGroup>
             <Footer />
             <ScrollToTop></ScrollToTop>
-        </>
+            </>
+        </ThemeProvider>
     )
 }
 

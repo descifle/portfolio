@@ -8,6 +8,8 @@ import { cards } from './misc'
 
 const WorkPage = () => { 
 
+    // add some text or button saying scroll down
+
     const [list, setList] = useState(cards)
     const [value, setValue] = useState(2)
 
@@ -31,6 +33,7 @@ const WorkPage = () => {
                     <Grid item xs={12} sm={6} key={card.projectName} >
                         <Card>
                             <CardHeader
+                            className="card-head"
                                 avatar={
                                     card.projectType === 'react' ? <FontAwesomeIcon size="lg" color="#61DBFB" icon={faReact} />:
                                     card.projectType === 'php' ? <FontAwesomeIcon size="lg" color="Magenta" icon={faPhp} /> :
@@ -49,7 +52,7 @@ const WorkPage = () => {
                                 image={card.image}
                                 title={card.projectName}
                             />
-                            <CardContent>
+                            <CardContent className="card-body">
                                {card.projectSkill}
                                 {/* <Button variant="outlined" >Something</Button> */}
                             </CardContent>
@@ -70,6 +73,7 @@ const WorkPage = () => {
                 {/* <div onClick={() => setList(cards.filter(card => card.projectType !== "php"))} style={{marginBottom: "5rem"}}>some kinda sort</div> */}
                 <Paper>
                     <Tabs
+                        className="sorter"
                         variant="fullWidth"
                         value={value}
                         indicatorColor="primary"
