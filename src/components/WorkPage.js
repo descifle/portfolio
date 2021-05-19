@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import { cards } from './misc'
+import { CSSTransition, tr, TransitionGroup } from 'react-transition-group'
 
 const WorkPage = () => { 
 
@@ -30,6 +31,11 @@ const WorkPage = () => {
     const renderCards = () => {
         return list.map((card) => {
             return (
+                <TransitionGroup component={null}>
+                <CSSTransition  timeout={200}
+                                classNames="fade" 
+                                key={card.projectName}
+                >
                     <Grid item xs={12} sm={6} key={card.projectName} >
                         <Card>
                             <CardHeader
@@ -58,6 +64,8 @@ const WorkPage = () => {
                             </CardContent>
                         </Card>
                     </Grid>
+                </CSSTransition>
+                </TransitionGroup>
             )
         })
     }
@@ -65,7 +73,7 @@ const WorkPage = () => {
     return (
         <Container>
             <div className="page-container">
-                <h2><Link to="/">Giovanni Headley</Link></h2>
+                <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
                     <span><GitHub fontSize="large" /></span>
                     <span><LinkedIn fontSize="large" /></span>

@@ -8,7 +8,7 @@ const ContactPage = () => {
     return (
         <Container>
             <div className="page-container">
-                <h2><Link to="/">Giovanni Headley</Link></h2>
+                <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
                         
                         

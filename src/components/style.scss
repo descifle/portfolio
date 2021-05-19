@@ -1,4 +1,4 @@
-$mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: #ffffff; 
+$mainColor: #2b4570;  $secondColor: #7180ac; $hightlight: #a8d0db; $textColor: black; 
 $coolColor: #1e93d6; $grey: #dcdcdc5d; $navColor: #171f36;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
@@ -19,13 +19,13 @@ h2 {
 body {
     font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
-    background-color: $mainColor;
-    color: white;
+    background-color: $grey;
+    color: $textColor;
     // overflow: hidden;
 }
 
 a {
-    color: white;
+    color: $textColor;
     text-decoration: none;
 }
 
@@ -69,6 +69,16 @@ a {
 // END HEADER
 
 // START MAINPAGE
+
+.home {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .1s ease-in-out;
+
+    &:hover {
+        color: $coolColor;
+    }
+}
 
 .page-container {
     position: relative;
@@ -184,7 +194,6 @@ a {
         margin-left: 6rem;
     }
 }
-
 
 // some random transition group css
 

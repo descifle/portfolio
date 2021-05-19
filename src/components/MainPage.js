@@ -7,7 +7,7 @@ const MainPage = () => {
     return (
         <Container>
             <div className="page-container">
-                <h2>Giovanni Headley</h2>
+                <h2 className="home">Giovanni Headley</h2>
                 <div className="socials">
                     <GitHub />
                     <LinkedIn />
