@@ -92,7 +92,7 @@ const WorkPage = () => {
                     <Chip label="SPA's" />
                     <Chip label="Debug" />
                     <Chip label="MOCHA" />
-                    <Chip label="JavaScript" />
+                    <Chip label="Test-Driven-Development" />
                     <Chip label="JavaScript" />
                 </div>
                 <Paper>
