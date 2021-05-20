@@ -14,6 +14,7 @@ const MainPage = () => {
                 </div>
                 <h1 className="main-header">Full Stack Developer</h1>
                 <div className="about-me">
+                    <p>some image showing my skillset with responsive pages</p>
                     <Grid>
                     <Card>
                             <CardContent>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button, Tabs, Tab, Paper } from '@material-ui/core'
+import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button, Tabs, Tab, Paper, Chip } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -31,12 +31,11 @@ const WorkPage = () => {
     const renderCards = () => {
         return list.map((card) => {
             return (
-                <TransitionGroup component={null}>
+                <TransitionGroup component={null}  key={card.projectName}>
                 <CSSTransition  timeout={200}
-                                classNames="fade" 
-                                key={card.projectName}
+                                classNames="fade"
                 >
-                    <Grid item xs={12} sm={6} key={card.projectName} >
+                    <Grid item xs={12} sm={10} md={5} className="web-card">
                         <Card>
                             <CardHeader
                             className="card-head"
@@ -78,7 +77,24 @@ const WorkPage = () => {
                     <span><GitHub fontSize="large" /></span>
                     <span><LinkedIn fontSize="large" /></span>
                 </div>
-                {/* <div onClick={() => setList(cards.filter(card => card.projectType !== "php"))} style={{marginBottom: "5rem"}}>some kinda sort</div> */}
+                <div className="chip-container">
+                    <Chip label="JavaScript" />
+                    <Chip label="ReactJS" />
+                    <Chip label="Redux" />
+                    <Chip label="NodeJS" />
+                    <Chip label="Relational DB" />
+                    <Chip label="Non-Relation DB" />
+                    <Chip label="Responsive Design" />
+                    <Chip label="CSS3" />
+                    <Chip label="HTML5" />
+                    <Chip label="Agile" />
+                    <Chip label="Git" />
+                    <Chip label="SPA's" />
+                    <Chip label="Debug" />
+                    <Chip label="MOCHA" />
+                    <Chip label="JavaScript" />
+                    <Chip label="JavaScript" />
+                </div>
                 <Paper>
                     <Tabs
                         className="sorter"
@@ -94,7 +110,7 @@ const WorkPage = () => {
                         <Tab label="Emails" />
                     </Tabs>
                 </Paper>
-                <Grid container spacing={10}>
+                <Grid container justify="space-around">
                     {renderCards()}
                 </Grid>
             </div>

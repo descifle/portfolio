@@ -123,6 +123,21 @@ a {
 
 // START WORKPAGE
 
+.chip-container {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+
+    div {
+        margin: .3rem .3rem;
+    }
+}
+
+.web-card {
+    margin: 1rem 0 !important;
+}
+
 .card-container {
     padding: 4rem;
 }
@@ -192,6 +207,10 @@ a {
 
     .page-container {
         margin-left: 6rem;
+    }
+
+    .web-card {
+        margin: 1rem !important;
     }
 }
 
