@@ -24,6 +24,10 @@ body {
     // overflow: hidden;
 }
 
+.page-container {
+    margin-top: 3rem;
+}
+
 a {
     color: $textColor;
     text-decoration: none;
@@ -55,6 +59,7 @@ a {
     // transform: none;
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
     transition: .2s ease;
 
     &:hover {
@@ -94,6 +99,19 @@ a {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.responsive-img-box {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    img {
+        max-width: 100%;
+    }
+
+    button {
+        
+    }
 }
 
 // END MAIN PAGE
@@ -174,11 +192,11 @@ a {
 
 // START MISC
 
-.page-container {
-    margin-top: 6rem;
-}
-
 @media(min-width: 40rem) {
+    .page-container {
+        margin-top: 0;
+    }
+
     .my-nav {
          position: fixed;
          top: 0;
@@ -247,14 +265,6 @@ a {
     transform: translate3d(-100%, 0, 0);
 }
 
-.pageSlider-exit.left  {
-    // transform: translate3d(-100%, 0, 0);
-}
-
-.pageSlider-exit.right {
-    // transform: translate3d(100%, 0, 0);
-}
-
 .pageSlider-enter.pageSlider-enter-active  {
     transform: translate3d(0, 0, 0);
     transition: all .8s ease-in-out;
@@ -262,7 +272,7 @@ a {
 
 .pageSlider-exit {
     opacity: 0;
-    margin-top: 4rem;
+    // margin-top: 3rem;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -273,4 +283,15 @@ a {
 .placeholdie {
     width: 4rem;
     height: 4rem;
+}
+
+.scroll-bottom {
+    z-index: 99;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    padding: 3rem;
+    font-size: 4rem;
+    color: orange;
+    cursor: pointer;
 }

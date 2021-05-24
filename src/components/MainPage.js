@@ -1,11 +1,12 @@
 import { Container, Grid, Card, CardContent, Button } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
+import responsiveImage from '../images/responsive-page.png'
 import React from 'react'
 
 const MainPage = () => {
 
     return (
-        <Container>
+        <Container >
             <div className="page-container">
                 <h2 className="home">Giovanni Headley</h2>
                 <div className="socials">
@@ -14,19 +15,27 @@ const MainPage = () => {
                 </div>
                 <h1 className="main-header">Full Stack Developer</h1>
                 <div className="about-me">
-                    <p>some image showing my skillset with responsive pages</p>
                     <Grid>
-                    <Card>
+                        <Card>
                             <CardContent>
-                            <p>
-                            I am a Full Stack Developer, working with React, Node, relational
-                            and non-relational databases, Lorem ipsum dolor sit amet
-                        </p>
-                                <Button variant="outlined" >Something</Button>
+                                <div style={{ textAlign:'center' }}>
+                                    <p>
+                                        I am a Full Stack Developer, working with ReactJS, NodeJS, relational
+                                        and non-relational databases
+                                    </p>
+                                    <p>
+                                        Through my career, I have been acknowledged as solution-focused engineer
+                                        that has the ability to design and develop innovative applications using advanced technologies
+                                    </p>
+                                </div>
                             </CardContent>
-                            </Card>
-                        
+                        </Card>
+                        <Grid className="responsive-img-box" item >
+                            <div><img src={responsiveImage} alt="responsive web pages" /></div>
+                            <Button>PORTFOLIO</Button>
+                        </Grid>
                     </Grid>
+                    
                 </div>
             </div>
         </Container>

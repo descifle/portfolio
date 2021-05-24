@@ -22,19 +22,8 @@ const App = () => {
     const timeout = { enter: 800, exit: 800 }
 
     let location = useLocation()
-    // let history = useHistory()
-    // const possiblePaths = ['/home', '/works', '/contact']
 
-    const outputClassname = () => {
-        return "left"
-        // if(history.location.pathname !== "/") {
-        //     // const pathFrom = possiblePaths.indexOf(history.location.state.from)
-        //     // const currentPath = possiblePaths.indexOf(history.location.pathname)
-        //     if(history.location.state.from === "/works") return "left"
-        //     if(history.location.state.from === "/contact") return "left"
-        //     if(history.location.state.from === "/home") return "left"
-        // }
-    }
+    const outputClassname = () => "left"
 
     return (
         <ThemeProvider theme={theme}>

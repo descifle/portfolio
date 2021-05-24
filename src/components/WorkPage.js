@@ -1,18 +1,59 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button, Tabs, Tab, Paper, Chip } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import { cards } from './misc'
-import { CSSTransition, tr, TransitionGroup } from 'react-transition-group'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import * as Scroll from 'react-scroll'
 
-const WorkPage = () => { 
+const WorkPage = () => {
+    let ScrollLink = Scroll.Link
+    let element = Scroll.Element
+    let events = Scroll.Events
+    let scroll = Scroll.animateScroll
+    let scrollSpy = Scroll.scrollSpy
 
     // add some text or button saying scroll down
+    // add hover effect on cards with a visit me link
 
     const [list, setList] = useState(cards)
     const [value, setValue] = useState(2)
+    const [hide, setHide] =  useState(false)
+
+    useEffect(() => {
+        events.scrollEvent.register('begin', function(to, element) {
+            console.log('begin', arguments)
+        })
+
+        events.scrollEvent.register('end', function(to, element) {
+            console.log('end', arguments)
+        })
+
+        scrollSpy.update()
+
+        return () => {
+           events.scrollEvent.remove('begin')
+           events.scrollEvent.remove('end')
+        }
+    })
+
+    useEffect(() => {
+
+       const checkScreenPos = () => {
+        console.log(window.scrollY)
+        window.scrollY > 50 ? setHide(true) : setHide(false)
+       }
+    
+       window.addEventListener('scroll', checkScreenPos)
+
+
+       return () => {
+        window.removeEventListener('scroll', checkScreenPos)
+       }
+    }, [])
 
     const handleChange = (event, newValue) => {
         if(newValue === value) {
@@ -26,6 +67,10 @@ const WorkPage = () => {
             if(newValue === 2) return card.filter.includes('emails')
         }))
         setValue(newValue)
+    }
+
+    const scrollToProjects = (e) => {
+        scroll.scrollTo(100)
     }
 
     const renderCards = () => {
@@ -71,6 +116,10 @@ const WorkPage = () => {
 
     return (
         <Container>
+            <div 
+            className={ hide ? 'hide-scroll':'scroll-bottom' }
+            onClick={scrollToProjects}
+            ><ArrowDownwardIcon fontSize="inherit" /></div>
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
@@ -110,7 +159,11 @@ const WorkPage = () => {
                         <Tab label="Emails" />
                     </Tabs>
                 </Paper>
-                <Grid container justify="space-around">
+                <Grid 
+                container 
+                justify="space-around"
+                name="my-works"
+                >
                     {renderCards()}
                 </Grid>
             </div>
