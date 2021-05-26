@@ -78,7 +78,7 @@ let realCards = [
         projectName : 'Food Planner',
         website : 'https://food-planner-elite.herokuapp.com/',
         projectType : 'react',
-        projectSkill : 'React, MERN, Js',
+        projectSkill : 'React, MERN, Js, Redux',
         filter : 'websites apps',
         image : foodPlanner
     }

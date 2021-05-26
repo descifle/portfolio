@@ -15,7 +15,7 @@ const theme = createMuiTheme()
 
 
 const App = () => {
-    console.log(theme.palette.primary, theme.palette)
+    // console.log(theme.palette.primary, theme.palette)
 
     // allow turning off of animation
 

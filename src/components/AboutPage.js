@@ -5,6 +5,8 @@ import React from 'react'
 
 const AboutPage = () => {
 
+    // add quick scroll to employment history
+
     return (
         <Container>
             <div className="page-container">
@@ -35,16 +37,16 @@ const AboutPage = () => {
                             <h3>BACK END ENGINEER @ SMART SOLUTIONS GROUP</h3>
                             <span>12/12/2012</span>
                             <p>
-                                som info about position
+                                Work with automated medical application.
                             </p>
                         </Grid>
                         <Grid item xs={2} md={1}>
                             <Typography>
-                                Current
+                                Past
                             </Typography>
                         </Grid>
                         <Grid item xs={10} md={11}>
-                            <h3>BACK END ENGINEER @ SMART SOLUTIONS GROUP</h3>
+                            <h3>FULL STACK DEVELOPER @ SWIFT STAFFING</h3>
                             <span>12/12/2012</span>
                             <p>
                                 som info about position
@@ -56,7 +58,7 @@ const AboutPage = () => {
                             </Typography>
                         </Grid>
                         <Grid item xs={10} md={11}>
-                            <h3>BACK END ENGINEER @ SMART SOLUTIONS GROUP</h3>
+                            <h3>FULLSTACK DEVELOPER @ DESCIFLE CONSULTANCY</h3>
                             <span>12/12/2012</span>
                             <p>
                                 som info about position

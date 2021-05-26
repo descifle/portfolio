@@ -43,7 +43,6 @@ const WorkPage = () => {
     useEffect(() => {
 
        const checkScreenPos = () => {
-        console.log(window.scrollY)
         window.scrollY > 50 ? setHide(true) : setHide(false)
        }
     
@@ -81,6 +80,10 @@ const WorkPage = () => {
                                 classNames="fade"
                 >
                     <Grid item xs={12} sm={10} md={5} className="web-card">
+                        <div className="caption">
+                            <h2>Visit Me</h2>
+                            <span>hello world</span>
+                        </div>
                         <Card>
                             <CardHeader
                             className="card-head"

@@ -6,6 +6,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 const Header = () => {
 
     let location = useLocation()
+    // use floating home button
 
     return (
         <header>

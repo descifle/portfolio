@@ -1,5 +1,5 @@
 import { Container } from '@material-ui/core'
-import { GitHub, LinkedIn } from '@material-ui/icons'
+import { GitHub, LinkedIn, Email } from '@material-ui/icons'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -9,14 +9,10 @@ const ContactPage = () => {
         <Container>
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
-                <div className="socials">
-                        
-                        
-                </div>
+                <div className="socials"></div>
                 <h1 className="contact-h1">Let's Talk</h1>
                 <div>
-                    <div>you can reach me at</div>
-                    <div><span><GitHub fontSize="large" /></span><span><LinkedIn fontSize="large" /></span><span>or at <a href="mailto:giovanniheadley@gmail.com">giovanniheadley@gmail.com</a></span></div>
+                    <div className="contact-center"><span><a href="https://github.com/descifle"><GitHub fontSize="inherit" /></a></span><span><a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="inherit" /></a></span><span><a href="mailto:giovanniheadley@gmail.com"><Email fontSize="inherit" /></a></span></div>
                 </div>
             </div>
         </Container>

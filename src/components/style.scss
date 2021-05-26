@@ -106,6 +106,8 @@ a {
     padding-bottom: 2rem;
 
     img {
+        width: 40rem;
+        height: auto;
         max-width: 100%;
     }
 
@@ -134,12 +136,14 @@ a {
 
 .employment-history {
     height: 20rem;
+    padding: 1rem;
+    background-color: white;
     overflow-y: scroll;
 }
 
 // END ABOUT PAGE
 
-// START WORKPAGE
+// START WORK PAGE
 
 .chip-container {
     display:flex;
@@ -153,7 +157,52 @@ a {
 }
 
 .web-card {
+    position: relative;
     margin: 1rem 0 !important;
+
+    &:hover {
+
+		.caption {
+			z-index: 10;
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 0;
+			background: #666;
+			background: rgba(80, 80, 80, 0.75);
+			width: 100%;
+		  }
+	}
+}
+
+.web-card::after {
+	z-index: 1;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: white;
+	opacity: 0;
+	transition: all .4s ease-in-out;
+}
+
+.web-card:hover::after {
+	opacity: .8;
+}
+
+.caption {
+	display: none;
+  }
+  
+.caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .9rem;
+	font-style: italic;
+	padding: 1.5rem;
 }
 
 .card-container {
@@ -178,14 +227,21 @@ a {
     margin-bottom: 3rem;
 }
 
-// END WORKPAGE
+// END WORK PAGE
 
 // START CONTACT PAGE
 
 .contact-h1 {
-    font-size: 7.5rem;
+    font-size: 4.5rem;
     text-align: center;
     padding: 4rem 0;
+}
+
+.contact-center {
+    padding: 0 2rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 // END CONTACT PAGE
@@ -229,6 +285,36 @@ a {
 
     .web-card {
         margin: 1rem !important;
+    }
+
+    .contact-h1 {
+        font-size: 7.5rem;
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .contact-center {
+        padding: 0 2rem;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        
+        svg {
+            margin: 0 2rem;
+            cursor: pointer;
+
+            &:hover {
+                
+            }
+        }
+    }
+
+    .left {
+        top: 0;
+    }
+
+    .right {
+        top: 0;
     }
 }
 
@@ -274,7 +360,7 @@ a {
     opacity: 0;
     // margin-top: 3rem;
     position: absolute;
-    top: 0;
+    top: 4rem;
     width: 100vw;
     // transform: translate3d(0, 0, 0);
     transition: all .8s ease-in-out;
@@ -288,8 +374,8 @@ a {
 .scroll-bottom {
     z-index: 99;
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    right: 0;
+    bottom: 0;
     padding: 3rem;
     font-size: 4rem;
     color: orange;
