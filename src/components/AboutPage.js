@@ -32,8 +32,8 @@ const AboutPage = () => {
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
-                    <a href="https://github.com/descifle"><GitHub fontSize="large" /></a>
-                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="large" /></a>
+                    <a href="https://github.com/descifle"><GitHub className="github" fontSize="large" /></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn className="linkedin" fontSize="large" /></a>
                 </div>
                 <h1 className="">ABOUT ME</h1>
                 <div>

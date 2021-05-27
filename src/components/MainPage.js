@@ -2,6 +2,7 @@ import { Container, Grid, Card, CardContent, Button } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import responsiveImage from '../images/responsive-page.png'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MainPage = () => {
 
@@ -10,8 +11,8 @@ const MainPage = () => {
             <div className="page-container">
                 <h2 className="home">Giovanni Headley</h2>
                 <div className="socials">
-                    <a href="https://github.com/descifle"><GitHub fontSize="large" /></a>
-                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="large" /></a>
+                    <a href="https://github.com/descifle"><GitHub className="github" fontSize="large" /></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn className="linkedin" fontSize="large" /></a>
                 </div>
                 <h1 className="main-header">Full Stack Developer</h1>
                 <div className="about-me">
@@ -32,7 +33,7 @@ const MainPage = () => {
                         </Card>
                         <Grid className="responsive-img-box" item >
                             <div><img src={responsiveImage} alt="responsive web pages" /></div>
-                            <Button>PORTFOLIO</Button>
+                            <Button><Link to="/works">PORTFOLIO</Link></Button>
                         </Grid>
                     </Grid>
                     

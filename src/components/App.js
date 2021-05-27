@@ -7,7 +7,7 @@ import ContactPage from './ContactPage'
 import AboutPage from './AboutPage'
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import ScrollToTop from './scrolltotop';
 import './style.scss'
 
@@ -15,9 +15,6 @@ const theme = createMuiTheme()
 
 
 const App = () => {
-    // console.log(theme.palette.primary, theme.palette)
-
-    // allow turning off of animation
 
     const timeout = { enter: 800, exit: 800 }
 

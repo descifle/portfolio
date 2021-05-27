@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Grid, Card, CardHeader ,CardActions, CardMedia, CardContent, Button, Tabs, Tab, Paper, Chip } from '@material-ui/core'
+import { Container, Grid, Card, CardHeader , CardMedia, CardContent, Tabs, Tab, Paper, Chip } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -14,11 +14,8 @@ const WorkPage = () => {
     let scroll = Scroll.animateScroll
     let scrollSpy = Scroll.scrollSpy
 
-    // add some text or button saying scroll down
-    // add hover effect on cards with a visit me link
-
     const [list, setList] = useState(cards)
-    const [value, setValue] = useState(null)
+    const [value, setValue] = useState()
     const [hide, setHide] =  useState(false)
 
     useEffect(() => {
@@ -124,8 +121,8 @@ const WorkPage = () => {
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
-                    <a href="https://github.com/descifle"><GitHub fontSize="large" /></a>
-                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="large" /></a>
+                    <a href="https://github.com/descifle"><GitHub className="github" fontSize="large" /></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn className="linkedin" fontSize="large" /></a>
                 </div>
                 <div className="chip-container">
                     <Chip label="JavaScript" />

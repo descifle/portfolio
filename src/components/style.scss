@@ -100,6 +100,22 @@ a {
     position: absolute;
     top: 0;
     right: 0;
+
+    svg {
+        transition: color .2s ease-in-out;
+    }
+    
+    .github {
+        &:hover {
+            color: grey;
+        }
+    }
+
+    .linkedin {
+        &:hover {
+            color: #0a66c2;
+        }
+    }
 }
 
 .responsive-img-box {
@@ -123,16 +139,6 @@ a {
 
 .employment {
     position: relative;
-    h2 {
-        // width: 25%;
-        // display: inline;
-        // margin-right: 1rem;
-    }
-
-    hr {
-        // width: 75%;
-        // display: inline-block;
-    }
 }
 
 .employment-history_tab {
@@ -282,6 +288,28 @@ a {
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
+
+    svg {
+        transition: color .2s ease-in-out;
+    }
+    
+    .github {
+        &:hover {
+            color: grey;
+        }
+    }
+
+    .linkedin {
+        &:hover {
+            color: #0a66c2;
+        }
+    }
+
+    .email {
+        &:hover {
+            color: grey;
+        }
+    }
 }
 
 // END CONTACT PAGE
@@ -342,10 +370,7 @@ a {
         svg {
             margin: 0 2rem;
             cursor: pointer;
-
-            &:hover {
-                
-            }
+            transition: color .2s ease-in-out;
         }
     }
 
