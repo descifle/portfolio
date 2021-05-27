@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Grid, Card, CardHeader , CardMedia, CardContent, Tabs, Tab, Paper, Chip } from '@material-ui/core'
+import { Container, Grid, Card, CardHeader , CardMedia, CardContent, Button, Tabs, Tab, Paper, Chip } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -10,22 +10,21 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import * as Scroll from 'react-scroll'
 
 const WorkPage = () => {
+
+    // scroll to top button appear
+
     let events = Scroll.Events
     let scroll = Scroll.animateScroll
     let scrollSpy = Scroll.scrollSpy
 
     const [list, setList] = useState(cards)
-    const [value, setValue] = useState()
+    const [value, setValue] = useState(0)
     const [hide, setHide] =  useState(false)
 
     useEffect(() => {
-        events.scrollEvent.register('begin', function(to, element) {
-            console.log('begin', arguments)
-        })
+        events.scrollEvent.register('begin', function(to, element) {})
 
-        events.scrollEvent.register('end', function(to, element) {
-            console.log('end', arguments)
-        })
+        events.scrollEvent.register('end', function(to, element) {})
 
         scrollSpy.update()
 
@@ -38,7 +37,7 @@ const WorkPage = () => {
     useEffect(() => {
 
        const checkScreenPos = () => {
-        window.scrollY > 50 ? setHide(true) : setHide(false)
+        window.scrollY > 100 ? setHide(true) : setHide(false)
        }
     
        window.addEventListener('scroll', checkScreenPos)
@@ -115,9 +114,13 @@ const WorkPage = () => {
     return (
         <Container>
             <div 
-            className={ hide ? 'hide-scroll':'scroll-bottom' }
+            className='scroll-bottom'
             onClick={scrollToProjects}
-            ><ArrowDownwardIcon fontSize="inherit" /></div>
+            >
+                {
+                    !hide ? <>scroll down <ArrowDownwardIcon /></> : <Button variant="contained" onClick={() => scroll.scrollToTop()}>Scroll up</Button>
+                }
+            </div>
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
