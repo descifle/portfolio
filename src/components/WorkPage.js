@@ -77,7 +77,7 @@ const WorkPage = () => {
                     <Grid item xs={12} sm={10} md={5} className="web-card">
                         <div className="caption" onClick={() => window.open(card.website)}>
                             <h2>Visit Me</h2>
-                            <span>hello world</span>
+                            <span>{card.synopsis}</span>
                         </div>
                         <Card>
                             <CardHeader

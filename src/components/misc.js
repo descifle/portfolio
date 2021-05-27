@@ -15,7 +15,8 @@ let realCards = [
         projectType :'js',
         projectSkill : 'Js, Css, html',
         filter : 'apps',
-        image : site6
+        image : site6,
+        synopsis: "Play Hangman!"
     },
     {
         projectName :'Email Invoice',
@@ -23,7 +24,8 @@ let realCards = [
         projectType :'html5',
         projectSkill : 'FFE, Html, Css',
         filter  : 'emails',
-        image : site5
+        image : site5,
+        synopsis: "Invoice email template"
     },
     {
         projectName : 'Notes App',
@@ -31,7 +33,8 @@ let realCards = [
         projectType : 'js',
         projectSkill :  'Css, Js',
         filter  :  'apps',
-        image : site7
+        image : site7,
+        synopsis: "Take notes and forget about them"
     },
     {  
         projectName : 'Email Newsletter',
@@ -39,7 +42,8 @@ let realCards = [
         projectType : 'html5',
         projectSkill :  'FFE, Html, Css',
         filter  :  'emails',
-        image : site4
+        image : site4,
+        synopsis: "Replicate a famous Newsletter"
     },
     {
         projectName: 'Uhost',
@@ -47,7 +51,8 @@ let realCards = [
         projectType: 'Html5',
         projectSkill:  'Css, Html, Js',
         filter :  'websites',
-        image: site3
+        image: site3,
+        synopsis: "Host everything from websites, apps, SPA's"
 
     },
     {
@@ -56,7 +61,8 @@ let realCards = [
         projectType : 'js',
         projectSkill :  'Css, Html, Js',
         filter  :  'websites',
-        image : site1
+        image : site1,
+        synopsis: "Chimney cleaning services"
     },
     {
         projectName : 'Sttimtennis',
@@ -64,7 +70,8 @@ let realCards = [
         projectType : 'php',
         projectSkill :  'Php, Mysql, Js, Css',
         filter  :  'websites apps',
-        image : site2
+        image : site2,
+        synopsis: "Create tennis appointments and set up plays"
     },
     {
         projectName : 'MyTube',
@@ -72,7 +79,8 @@ let realCards = [
         projectType : 'react',
         projectSkill : 'React, MERN, Js',
         filter : 'websites apps',
-        image : mytube
+        image : mytube,
+        synopsis: "View and save youtube videos"
     },
     {
         projectName : 'Food Planner',
@@ -80,7 +88,8 @@ let realCards = [
         projectType : 'react',
         projectSkill : 'React, MERN, Js, Redux',
         filter : 'websites apps',
-        image : foodPlanner
+        image : foodPlanner,
+        synopsis: "Track your caloric intake"
     }
 ]
 
