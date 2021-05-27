@@ -10,8 +10,6 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import * as Scroll from 'react-scroll'
 
 const WorkPage = () => {
-    let ScrollLink = Scroll.Link
-    let element = Scroll.Element
     let events = Scroll.Events
     let scroll = Scroll.animateScroll
     let scrollSpy = Scroll.scrollSpy
@@ -20,7 +18,7 @@ const WorkPage = () => {
     // add hover effect on cards with a visit me link
 
     const [list, setList] = useState(cards)
-    const [value, setValue] = useState(2)
+    const [value, setValue] = useState(null)
     const [hide, setHide] =  useState(false)
 
     useEffect(() => {
@@ -80,7 +78,7 @@ const WorkPage = () => {
                                 classNames="fade"
                 >
                     <Grid item xs={12} sm={10} md={5} className="web-card">
-                        <div className="caption">
+                        <div className="caption" onClick={() => window.open(card.website)}>
                             <h2>Visit Me</h2>
                             <span>hello world</span>
                         </div>
@@ -126,8 +124,8 @@ const WorkPage = () => {
             <div className="page-container">
                 <h2 className="home"><Link to="/">Giovanni Headley</Link></h2>
                 <div className="socials">
-                    <span><GitHub fontSize="large" /></span>
-                    <span><LinkedIn fontSize="large" /></span>
+                    <a href="https://github.com/descifle"><GitHub fontSize="large" /></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="large" /></a>
                 </div>
                 <div className="chip-container">
                     <Chip label="JavaScript" />

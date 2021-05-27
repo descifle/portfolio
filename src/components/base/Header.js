@@ -18,14 +18,12 @@ const Header = () => {
                             <div className="img-overlay"></div>
                         </div>
                     </NavLink> */}
-                    <NavLink activeClassName='active' className="menu-item" to={
-                        {
+                    <NavLink activeClassName='active' className="menu-item" to={{
                             pathname: '/about',
                             state: {
                                 from: location.pathname
                             }
-                        }
-                    }>
+                        }}>
                         About
                     </NavLink>
                     <NavLink activeClassName='active' className="menu-item" to={

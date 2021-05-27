@@ -10,8 +10,8 @@ const MainPage = () => {
             <div className="page-container">
                 <h2 className="home">Giovanni Headley</h2>
                 <div className="socials">
-                    <GitHub />
-                    <LinkedIn />
+                    <a href="https://github.com/descifle"><GitHub fontSize="large" /></a>
+                    <a href="https://www.linkedin.com/in/giovanni-headley/"><LinkedIn fontSize="large" /></a>
                 </div>
                 <h1 className="main-header">Full Stack Developer</h1>
                 <div className="about-me">
