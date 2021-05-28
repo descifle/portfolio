@@ -43,18 +43,12 @@ const App = () => {
                         outputClassname()
                     }>
                     <Switch location={location}>
-                        <Route exact name="home" path="/" component={MainPage} />
+                        <Route exact def name="home" path="/" component={MainPage} />
                         <Route exact name="about" path="/about" component={AboutPage} />
                         <Route exact name="works" path="/works" component={WorkPage} />
                         <Route exact name="contact" path="/contact" component={ContactPage} />
-                        {/* <Route path="*"><div>Not Found</div></Route> */}
-                        {/* <Route name="about" path="/about" component={Content} />
-                        <Route path="/projects" component={Projects} />
-                        <Route path="/contact" component={Contact} /> */}
+                        <Route path="*" component={MainPage} />
                     </Switch>
-                    {/* <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.dark, }}></div>
-                    <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.light, }}></div>
-                    <div className="placeholdie" style={{ backgroundColor: theme.palette.primary.main, }}></div> */}
                     </div>
                 </CSSTransition>
             </TransitionGroup>

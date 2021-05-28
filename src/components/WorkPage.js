@@ -118,7 +118,7 @@ const WorkPage = () => {
             onClick={scrollToProjects}
             >
                 {
-                    !hide ? <>scroll down <ArrowDownwardIcon /></> : <Button variant="contained" onClick={() => scroll.scrollToTop()}>Scroll up</Button>
+                    !hide ? <Button>scroll down <ArrowDownwardIcon /></Button> : <Button variant="contained" onClick={() => scroll.scrollToTop()}>Scroll up</Button>
                 }
             </div>
             <div className="page-container">
