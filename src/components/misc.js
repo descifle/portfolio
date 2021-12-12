@@ -10,8 +10,17 @@ import foodPlanner from '../images/site9.png'
 
 let realCards = [
     {
+        projectName :'Acupuncture Website',
+        website :'https://www.startingpointacupuncture.net',
+        projectType :'html5',
+        projectSkill : 'Js, Css, html',
+        filter : 'websites',
+        image : null,
+        synopsis: "Maryland Acupuncturist"
+    },
+    {
         projectName :'Hangman Game',
-        website :'https://descifle.github.io/hangman-game/',
+        website :'https://descifle.github.io/hangman-game',
         projectType :'js',
         projectSkill : 'Js, Css, html',
         filter : 'apps',
