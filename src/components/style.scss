@@ -170,6 +170,15 @@ a {
 
 .employment-item {
     height: 100%;
+
+    h3 {
+        color: $mainColor;
+    }
+
+    p {
+        max-width: 30rem;
+        color: grey;
+    }
 }
 
 // END ABOUT PAGE
@@ -204,9 +213,12 @@ a {
             height: 100%;
 			bottom: 0;
 			left: 0;
-			background: #666;
-			background: rgba(80, 80, 80, 0.75);
+			background: #2b457094;
 			width: 100%;
+
+            h2 {
+                text-decoration: underline;
+            }
 		  }
 	}
 }

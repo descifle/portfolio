@@ -4,7 +4,7 @@ import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
-import { cards } from './misc'
+import { cards } from './base/misc'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import * as Scroll from 'react-scroll'
@@ -98,6 +98,7 @@ const WorkPage = () => {
                                 className="card-img"
                                 image={card.image}
                                 title={card.projectName}
+                                component="div"
                             />
                             <CardContent className="card-body">
                                {card.projectSkill}
