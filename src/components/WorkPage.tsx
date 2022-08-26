@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Grid, Card, CardHeader , CardMedia, CardContent, Button, Tabs, Tab, Paper, Chip } from '@material-ui/core'
+import { GridProps } from '@material-ui/core/Grid'
+import { styled } from '@mui/material/styles'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPhp, faHtml5 } from '@fortawesome/free-brands-svg-icons'
@@ -8,6 +10,7 @@ import { cards } from './base/misc'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import * as Scroll from 'react-scroll'
+import { JsxElement } from 'typescript'
 
 const WorkPage = () => {
 
@@ -21,10 +24,16 @@ const WorkPage = () => {
     const [value, setValue] = useState(0)
     const [hide, setHide] =  useState(false)
 
-    useEffect(() => {
-        events.scrollEvent.register('begin', function(to, element) {})
+    interface CustomGridProps extends GridProps  {
+        name?: string
+    }
 
-        events.scrollEvent.register('end', function(to, element) {})
+    const CustomGrid = styled(Grid)<CustomGridProps>({ boxShadow: "none" });
+
+    useEffect(() => {
+        events.scrollEvent.register('begin', function(to: JsxElement, element: JsxElement) {})
+
+        events.scrollEvent.register('end', function(to: JsxElement, element: JsxElement) {})
 
         scrollSpy.update()
 
@@ -48,10 +57,10 @@ const WorkPage = () => {
        }
     }, [])
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         if(newValue === value) {
             setList(cards)
-            return setValue(false)
+            return
         }
         // eslint-disable-next-line array-callback-return
         setList(cards.filter(card => {
@@ -62,7 +71,7 @@ const WorkPage = () => {
         setValue(newValue)
     }
 
-    const scrollToProjects = (e) => {
+    const scrollToProjects = () => {
         scroll.scrollTo(100)
     }
 
@@ -161,13 +170,13 @@ const WorkPage = () => {
                         <Tab label="Emails" />
                     </Tabs>
                 </Paper>
-                <Grid 
+                <CustomGrid 
                 container 
-                justify="space-around"
+                justifyContent="space-around"
                 name="my-works"
                 >
                     {renderCards()}
-                </Grid>
+                </CustomGrid>
             </div>
         </Container>
     )

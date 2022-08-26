@@ -1,11 +1,9 @@
 import React from 'react';
 // import myPhoto from '../images/head_photo.jpg';
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 const Header = () => {
-
-    let location = useLocation()
     // use floating home button
 
     return (
@@ -18,30 +16,21 @@ const Header = () => {
                             <div className="img-overlay"></div>
                         </div>
                     </NavLink> */}
-                    <NavLink activeClassName='active' className="menu-item" to={{
+                    <NavLink className="menu-item" to={{
                             pathname: '/about',
-                            state: {
-                                from: location.pathname
-                            }
                         }}>
                         About
                     </NavLink>
-                    <NavLink activeClassName='active' className="menu-item" to={
+                    <NavLink className="menu-item" to={
                         {
                             pathname: '/works',
-                            state: {
-                                from: location.pathname
-                            }
                         }
                     }>
                         Work
                     </NavLink>
-                    <NavLink activeClassName='active' className="menu-item" to={
+                    <NavLink className="menu-item" to={
                         {
                             pathname: '/contact',
-                            state: {
-                                from: location.pathname
-                            }
                         }
                     }>
                         Contact

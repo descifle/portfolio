@@ -1,13 +1,13 @@
-import site1 from '../../images/site1.png';
-import site2 from '../../images/site2.png';
-import site3 from '../../images/site3.png';
-import site4 from '../../images/site4.png';
-import site5 from '../../images/site5.png';
-import site6 from '../../images/site6.png';
-import site7 from '../../images/site7.png';
-import mytube from '../../images/mytube.png';
-import foodPlanner from '../../images/site9.png';
-import acupuncture from '../../images/acupuncture.png';
+import site1 from '../../assets/images/site1.png';
+import site2 from '../../assets/images/site2.png';
+import site3 from '../../assets/images/site3.png';
+import site4 from '../../assets/images/site4.png';
+import site5 from '../../assets/images/site5.png';
+import site6 from '../../assets/images/site6.png';
+import site7 from '../../assets/images/site7.png';
+import mytube from '../../assets/images/mytube.png';
+import foodPlanner from '../../assets/images/site9.png';
+import acupuncture from '../../assets/images/acupuncture.png';
 
 const cards = [
     {
@@ -138,7 +138,17 @@ const jobInfo = [
     }
 ]
 
+interface JobProps {
+    position: string,
+    timePeriod: string,
+    info: string,
+    status: string,
+    scrollName: string,
+    company: string
+}
+
 export {
    cards,
-   jobInfo
+   jobInfo,
+   JobProps
 }

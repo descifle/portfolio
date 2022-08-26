@@ -5,14 +5,13 @@ import MainPage from './MainPage'
 import WorkPage from './WorkPage'
 import ContactPage from './ContactPage'
 import AboutPage from './AboutPage'
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import ScrollToTop from './scrolltotop';
-import './style.scss'
+import '../assets/css/style.scss'
 
-const theme = createMuiTheme()
-
+const theme = createTheme()
 
 const App = () => {
 
@@ -42,13 +41,13 @@ const App = () => {
                     <div className={
                         outputClassname()
                     }>
-                    <Switch location={location}>
-                        <Route exact def name="home" path="/" component={MainPage} />
-                        <Route exact name="about" path="/about" component={AboutPage} />
-                        <Route exact name="works" path="/works" component={WorkPage} />
-                        <Route exact name="contact" path="/contact" component={ContactPage} />
-                        <Route path="*" component={MainPage} />
-                    </Switch>
+                    <Routes location={location}>
+                        <Route path="/" element={<MainPage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/works" element={<WorkPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="*" element={<MainPage />} />
+                    </Routes>
                     </div>
                 </CSSTransition>
             </TransitionGroup>

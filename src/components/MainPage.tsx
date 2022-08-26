@@ -1,13 +1,13 @@
 import { Container, Grid, Card, CardContent, Button } from '@material-ui/core'
 import { GitHub, LinkedIn } from '@material-ui/icons'
-import responsiveImage from '../images/responsive-page.png'
+import responsiveImage from '../assets/images/responsive-page.png'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MainPage = () => {
 
     return (
-        <Container >
+        <Container>
             <div className="page-container">
                 <h2 className="home">Giovanni Headley</h2>
                 <div className="socials">

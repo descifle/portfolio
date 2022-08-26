@@ -1,9 +1,12 @@
 import { Container, Grid, Typography } from '@material-ui/core'
+import { GridProps } from '@material-ui/core/Grid'
 import { GitHub, LinkedIn } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 import React, { useEffect } from 'react'
-import { jobInfo } from './base/misc'
+import { jobInfo, JobProps } from './base/misc'
 import * as Scroll from 'react-scroll'
+import { styled } from '@mui/material/styles';
+import { JsxElement } from 'typescript'
 
 const AboutPage = () => {
 
@@ -11,12 +14,20 @@ const AboutPage = () => {
     let events = Scroll.Events
     let scrollSpy = Scroll.scrollSpy
 
+    type DomElem = JsxElement
+
+    interface CustomGridProps extends GridProps  {
+        name?: string
+    }
+
+    const CustomGrid = styled(Grid)<CustomGridProps>({ boxShadow: "none" });
+
     useEffect(() => {
-        events.scrollEvent.register('begin', function (to, element) {
+        events.scrollEvent.register('begin', function (to: DomElem, element: DomElem) {
             // console.log('begin', arguments)
         })
 
-        events.scrollEvent.register('end', function (to, element) {
+        events.scrollEvent.register('end', function (to: DomElem, element: DomElem) {
             // console.log('end', arguments)
         })
 
@@ -44,13 +55,13 @@ const AboutPage = () => {
 
                 </div>
                 <div className="employment">
-                    <Grid container justify="space-between" alignItems="center">
+                    <Grid container justifyContent="space-between" alignItems="center">
                         <Grid item xs={4} sm={3} md={2}><h2>Employment</h2></Grid>
                         <Grid item xs={6} sm={9} md={10}><hr /></Grid>
                     </Grid>
                     <Grid container alignItems="center" className="employment-history" id="employment-history">
                         <div className="employment-history_tab">
-                            {jobInfo.map(job => (
+                            {jobInfo.map((job: JobProps) => (
                                 <ScrollLink key={job.scrollName} activeClass="nav-active" to={job.scrollName} spy={true} smooth={true} offset={-50} duration={100} containerId="employment-history">
                                     <p>{job.company}</p>
                                 </ScrollLink>
@@ -65,11 +76,11 @@ const AboutPage = () => {
                                                 {job.status}
                                             </Typography>
                                         </Grid>
-                                        <Grid item xs={9} md={11} className="employment-item" name={job.scrollName}>
+                                        <CustomGrid item xs={9} md={11} className="employment-item"  name={job.scrollName}>
                                             <h3>{job.position}</h3>
                                             <span>{job.timePeriod}</span>
                                             <p>{job.info}</p>
-                                        </Grid>
+                                        </CustomGrid>
                                     </React.Fragment>
                                 )
                             })
