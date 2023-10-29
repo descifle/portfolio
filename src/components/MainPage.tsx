@@ -1,5 +1,5 @@
-import { Container, Grid, Card, CardContent, Button } from '@material-ui/core'
-import { GitHub, LinkedIn } from '@material-ui/icons'
+import { Container, Grid, Card, CardContent, Button } from '@mui/material'
+import { GitHub, LinkedIn } from '@mui/icons-material'
 import responsiveImage from '../assets/images/responsive-page.png'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -33,7 +33,7 @@ const MainPage = () => {
                         </Card>
                         <Grid className="responsive-img-box" item >
                             <div><img src={responsiveImage} alt="responsive web pages" /></div>
-                            <Button><Link to="/works">PORTFOLIO</Link></Button>
+                            <Button><Link to="/about">PORTFOLIO</Link></Button>
                         </Grid>
                     </Grid>
                     

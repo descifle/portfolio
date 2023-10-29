@@ -1,24 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e5b9c0b.css",
-    "main.js": "/static/js/main.859bcb2f.js",
+    "main.css": "/static/css/main.e8e3ddaf.css",
+    "main.js": "/static/js/main.71265094.js",
     "static/media/responsive-page.png": "/static/media/responsive-page.4e5398639e1192742690.png",
-    "static/media/site2.png": "/static/media/site2.8294757aeb3d9f23067d.png",
-    "static/media/site1.png": "/static/media/site1.64a1951c003447f46d38.png",
-    "static/media/acupuncture.png": "/static/media/acupuncture.d95d56aff3fd7be431bb.png",
-    "static/media/site3.png": "/static/media/site3.fd2b29fd8e38cf07d5db.png",
-    "static/media/mytube.png": "/static/media/mytube.26ec203dc15b118388bf.png",
-    "static/media/site9.png": "/static/media/site9.3d6a5aa4b423697a94c3.png",
-    "static/media/site4.png": "/static/media/site4.93fdbaaab5675078037f.png",
-    "static/media/site5.png": "/static/media/site5.388062b86bc82b7f069c.png",
-    "static/media/site7.png": "/static/media/site7.0eee41fb215bf50cba43.png",
-    "static/media/site6.png": "/static/media/site6.49ec9720c9ca71ce39b7.png",
     "index.html": "/index.html",
-    "main.3e5b9c0b.css.map": "/static/css/main.3e5b9c0b.css.map",
-    "main.859bcb2f.js.map": "/static/js/main.859bcb2f.js.map"
+    "main.e8e3ddaf.css.map": "/static/css/main.e8e3ddaf.css.map",
+    "main.71265094.js.map": "/static/js/main.71265094.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e5b9c0b.css",
-    "static/js/main.859bcb2f.js"
+    "static/css/main.e8e3ddaf.css",
+    "static/js/main.71265094.js"
   ]
 }

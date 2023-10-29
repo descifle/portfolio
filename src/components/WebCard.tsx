@@ -2,18 +2,11 @@ import React from 'react';
 import './webcard.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { WebCardProps } from '../utils/misc';
 
 AOS.init()
 
-type Props = {
-    image: string,
-    projectName: string,
-    website: string,
-    projectSkill: string,
-    projectType: string
-}
-
-const WebCard = (props: Props) => {
+const WebCard = (props: WebCardProps) => {
     return (
         <div className="card rounded" data-aos="zoom-in-down" data-aos-delay="150">
             <div className="image">

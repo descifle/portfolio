@@ -1,12 +1,12 @@
-import { Container, Grid, Typography } from '@material-ui/core'
-import { GridProps } from '@material-ui/core/Grid'
-import { GitHub, LinkedIn } from '@material-ui/icons'
+import { Container, Grid, Typography } from '@mui/material'
+import { GitHub, LinkedIn } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import React, { useEffect } from 'react'
-import { jobInfo, JobProps } from './base/misc'
+import { jobInfo, JobProps } from '../utils/misc'
 import * as Scroll from 'react-scroll'
 import { styled } from '@mui/material/styles';
 import { JsxElement } from 'typescript'
+import { CustomGridProps } from '../utils/misc'
 
 const AboutPage = () => {
 
@@ -14,20 +14,14 @@ const AboutPage = () => {
     let events = Scroll.Events
     let scrollSpy = Scroll.scrollSpy
 
-    type DomElem = JsxElement
-
-    interface CustomGridProps extends GridProps  {
-        name?: string
-    }
-
     const CustomGrid = styled(Grid)<CustomGridProps>({ boxShadow: "none" });
 
     useEffect(() => {
-        events.scrollEvent.register('begin', function (to: DomElem, element: DomElem) {
+        events.scrollEvent.register('begin', function (to: JsxElement, element: JsxElement) {
             // console.log('begin', arguments)
         })
 
-        events.scrollEvent.register('end', function (to: DomElem, element: DomElem) {
+        events.scrollEvent.register('end', function (to: JsxElement, element: JsxElement) {
             // console.log('end', arguments)
         })
 
@@ -49,8 +43,10 @@ const AboutPage = () => {
                 </div>
                 <h1 className="">ABOUT ME</h1>
                 <div>
-                    <p>Full Stack Web Developer working mainly in the MERN stack. Currently residing in Halethorpe, but am open to relocation.
-                        I take much pride in my work, and I am always striving to learn.
+                    <p>Full Stack Web Developer working mainly with the MERN stack and C#. Currently residing in Linthicum Heights.
+                    I have a demonstrated track record of domain expertise including understanding technical concepts by 
+                    leveraging my proficiency in JavaScript, .net and the Azure ecosystem to deliver efficient and scalable web applications. 
+                    My passion for innovation and exceptional problem solving has driven me to stay up-to-date with the latest technologies. 
                     </p>
 
                 </div>

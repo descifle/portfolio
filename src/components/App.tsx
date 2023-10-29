@@ -2,12 +2,11 @@ import React from 'react';
 import Header from './base/Header';
 import Footer from './base/Footer';
 import MainPage from './MainPage'
-import WorkPage from './WorkPage'
 import ContactPage from './ContactPage'
 import AboutPage from './AboutPage'
 import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@mui/material'
 import ScrollToTop from './scrolltotop';
 import '../assets/css/style.scss'
 
@@ -44,7 +43,6 @@ const App = () => {
                     <Routes location={location}>
                         <Route path="/" element={<MainPage />} />
                         <Route path="/about" element={<AboutPage />} />
-                        <Route path="/works" element={<WorkPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="*" element={<MainPage />} />
                     </Routes>
